@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .w3-bar {
+      background-color: #2b4d27; /* أخضر داكن */
+    }
+    .w3-bar .w3-button {
+      color: white;
+    }
+    .w3-bar .w3-button:hover {
+      background-color: #446b3c;
+    }
+    .contact-form {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact-form label {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #2b4d27;
+      outline: none;
+    }
+    .contact-form button {
+      background-color: #2b4d27;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #446b3c;
+    }
+    h2 {
+      text-align: center;
+      color: #2b4d27;
+    }
+  </style>
+</head>
+<body>
+
+<!-- شريط التنقل -->
+<div class="w3-bar w3-large">
+  <a href="index.html" class="w3-bar-item w3-button">الرئيسية</a>
+  <a href="future.html" class="w3-bar-item w3-button">رؤية 2030</a>
+  <a href="contact.html" class="w3-bar-item w3-button">اتصل بنا</a>
+</div>
+
+<!-- نموذج الاتصال -->
+<div class="w3-container w3-padding-64">
+  <h2 class="w3-text-green">تواصل معنا</h2>
+  
+  <!-- حاوية النموذج -->
+  <form class="contact-form">
+    <label for="name">الاسم الكامل</label>
+    <input class="w3-input" type="text" id="name" name="name" placeholder="أدخل اسمك" required>
+
+    <label for="email">عنوان البريد الإلكتروني</label>
+    <input class="w3-input" type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+
+    <label for="message">الرسالة</label>
+    <textarea class="w3-input" id="message" name="message" placeholder="اكتب رسالتك" rows="5" required></textarea>
+
+    <button type="submit" class="w3-button w3-green w3-margin-top">إرسال</button>
+  </form>
+</div>
+
+</body>
+</html>

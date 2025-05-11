@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>ملوك المملكة العربية السعودية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background-color: #111; color: white; }
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+    .modal-content { background: #004400; color: white; margin: 5% auto; padding: 20px; width: 80%; max-width: 900px; border-radius: 8px; position: relative; }
+    .close { color: white; position: absolute; right: 20px; top: 10px; font-size: 28px; cursor: pointer; }
+    .modal-image { max-width: 200px; float: right; margin-left: 20px; border-radius: 10px; }
+    .w3-bar { background-color: #2b4d27; }
+
+    .king-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .king-gallery img {
+      width: 180px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- شريط التنقل -->
+<div class="w3-bar w3-large">
+  <a href="index.html" class="w3-bar-item w3-button">الرئيسية</a>
+  <a href="future.html" class="w3-bar-item w3-button">رؤية 2030</a>
+  <a href="contact.html" class="w3-bar-item w3-button">اتصل بنا</a>
+</div>
+
+<!-- Modal -->
+<div id="kingModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" class="modal-image" src="" alt="">
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- Kings Section -->
+<div class="w3-padding-large w3-content" id="kings">
+  <h2 class="w3-text-light-grey">ملوك المملكة العربية السعودية</h2>
+  <hr style="width:200px" class="w3-opacity">
+
+  <!-- Past Kings -->
+  <div class="king-gallery">
+    <img src="الملك_عبدالعزيز.jpg" alt="الملك عبدالعزيز"
+      data-fullname="الملك عبدالعزيز (ابن سعود)"
+      data-image="الملك_عبدالعزيز.jpg"
+      data-reign="1932 – 1953"
+      data-birth="1875"
+      data-death="1953"
+      data-achievements="وحد شبه الجزيرة العربية وأسّس المملكة العربية السعودية في عام 1932."
+      data-facts="استولى على الرياض في عام 1902 عن عمر يناهز 26 عامًا، مما أدى إلى بداية حملته لتوحيد المملكة."
+      data-quote="الوحدة قوة. والتقسيم ضعف."
+      onclick="openModal(this)">
+    
+    <img src="الملك_سعود.jpg" alt="الملك سعود"
+      data-fullname="الملك سعود بن عبدالعزيز آل سعود"
+      data-image="الملك_سعود.jpg"
+      data-reign="1953 – 1964"
+      data-birth="1902"
+      data-death="1969"
+      data-achievements="وسع النظام التعليمي، وبنى الجامعات، وطوّر البنية التحتية بما في ذلك المستشفيات والطرق."
+      data-facts="كان أول ملك يخلف والده عبدالعزيز. واجهت فترة حكمه صعوبات مالية داخلية مما أدى إلى تنازله عن العرش."
+      data-quote="يجب أن نبني مستقبل أمتنا بالعلم والقوة."
+      onclick="openModal(this)">
+    
+    <img src="الملك_فيصل.jpg" alt="الملك فيصل"
+      data-fullname="الملك فيصل"
+      data-image="الملك_فيصل.jpg"
+      data-reign="1964 – 1975"
+      data-birth="1906"
+      data-death="1975"
+      data-achievements="حدثت البلاد وقاد الحظر النفطي في عام 1973."
+      data-facts="كان معروفًا بموقفه الصارم ضد الفساد وجهوده في تعزيز التضامن الإسلامي."
+      data-quote="سياساتنا مبنية على المبادئ الإسلامية."
+      onclick="openModal(this)">
+    
+    <img src="الملك_خالد.jpg" alt="الملك خالد"
+      data-fullname="الملك خالد بن عبدالعزيز آل سعود"
+      data-image="الملك_خالد.jpg"
+      data-reign="1975 – 1982"
+      data-birth="1913"
+      data-death="1982"
+      data-achievements="شهدت فترة حكمه ازدهارًا كبيرًا بفضل ارتفاع إيرادات النفط؛ وزيّع الخدمات الاجتماعية والبنية التحتية."
+      data-facts="كان معروفًا بتواضعه ودعمه للقيم الإسلامية؛ وساهم في استقرار المنطقة في وقت التغيرات العالمية."
+      data-quote="الإسلام هو أساس تنميتنا ووحدتنا."
+      onclick="openModal(this)">
+    
+    <img src="الملك_فهد.jpg" alt="الملك فهد"
+      data-fullname="الملك فهد بن عبدالعزيز آل سعود"
+      data-image="الملك_فهد.jpg"
+      data-reign="1982 – 2005"
+      data-birth="1921"
+      data-death="2005"
+      data-achievements="أدخل لقب 'خادم الحرمين الشريفين'، وأدار البلاد خلال حرب الخليج، وقدم التحديث في التعليم والإدارة."
+      data-facts="كان أول ملك سعودي يتبنى لقب 'خادم الحرمين الشريفين' رسميًا، مما يبرز الوصاية الدينية للمملكة."
+      data-quote="ديننا وتراثنا يوجهان تحديثنا وتقدمنا."
+      onclick="openModal(this)">
+    
+    <img src="الملك_عبدالله.jpg" alt="الملك عبدالله"
+      data-fullname="الملك عبدالله بن عبدالعزيز آل سعود"
+      data-image="الملك_عبدالله.jpg"
+      data-reign="2005 – 2015"
+      data-birth="1924"
+      data-death="2015"
+      data-achievements="أطلق مدينة الملك عبدالله الاقتصادية، ودعم تعليم المرأة، وأجرى إصلاحات محدودة في مجال العمل، وعزز الدبلوماسية العالمية."
+      data-facts="فتح أول جامعة مختلطة في السعودية (KAUST)؛ وأكد على الحوار بين الحضارات."
+      data-quote="الأمة القوية هي التي تعلم شعبها وتفتح قلبها للسلام."
+      onclick="openModal(this)">
+  </div>
+
+  <!-- Future Kings -->
+  <div class="w3-padding-large w3-content" id="future">
+    <h2 class="w3-text-light-grey">القيادة المستقبلية</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="king-gallery">
+      <img src="الملك_سلمان.jpg" alt="الملك سلمان"
+        data-fullname="الملك سلمان بن عبدالعزيز آل سعود"
+        data-image="الملك_سلمان.jpg"
+        data-reign="2015 – حتى الآن"
+        data-birth="1935"
+        data-death="الآن"
+        data-achievements="أطلق رؤية 2030 لتنويع الاقتصاد، عزز المؤسسات الحكومية، وقاد الإصلاحات الإدارية الكبرى."
+        data-facts="شغل منصب أمير الرياض لأكثر من خمسة عقود؛ معروف بمعرفته العميقة بتاريخ المملكة وشؤونها القبلية."
+        data-quote="رؤيتنا هي المملكة العربية السعودية القوية والمتنمية والمستقرة التي توفر الفرص للجميع."
+        onclick="openModal(this)">
+      
+      <img src="الامير محمد بن سلمان.jpg" alt="محمد بن سلمان"
+        data-fullname="ولي العهد محمد بن سلمان آل سعود"
+        data-image="الامير محمد بن سلمان.jpg"
+        data-reign="غير محدد"
+        data-birth="1985"
+        data-death="غير محدد"
+        data-achievements="مهندس رؤية 2030؛ قاد مشاريع مثل نيوم، ودعم تنويع الاقتصاد، وتمكين المرأة، وتحرير الحياة الاجتماعية."
+        data-facts="يشغل العديد من المناصب المهمة بما في ذلك وزير الدفاع؛ أطلق مبادرات تكنولوجية لتحويل المملكة إلى مركز عالمي للابتكار."
+        data-quote="مستقبل المملكة العربية السعودية يكمن في طموحنا وشبابنا وعزيمتنا."
+        onclick="openModal(this)">
+    </div>
+  </div>
+</div>
+
+<!-- Modal Script -->
+<script>
+const modal = document.getElementById("kingModal");
+const span = document.getElementsByClassName("close")[0];
+
+function openModal(element) {
+  document.getElementById("modalTitle").textContent = element.dataset.fullname;
+  document.getElementById("modalImage").src = element.dataset.image;
+  document.getElementById("modalImage").alt = element.dataset.fullname;
+  document.getElementById("modalContent").innerHTML = `
+    <p><strong>فترة الحكم:</strong> ${element.dataset.reign}</p>
+    <p><strong>تاريخ الميلاد:</strong> ${element.dataset.birth}</p>
+    <p><strong>تاريخ الوفاة:</strong> ${element.dataset.death}</p>
+    <h4>أهم الإنجازات:</h4>
+    <p>${element.dataset.achievements}</p>
+    <h4>حقائق مثيرة:</h4>
+    <p>${element.dataset.facts}</p>
+    <h4>اقتباس:</h4>
+    <blockquote>${element.dataset.quote}</blockquote>
+  `;
+  modal.style.display = "block";
+}
+
+span.onclick = () => modal.style.display = "none";
+window.onclick = event => { if (event.target == modal) modal.style.display = "none"; }
+</script>
+
+</body>
+</html>
